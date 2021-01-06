@@ -1,0 +1,25 @@
+specVersion: 0.0.2
+description: Indexing all Avalanche C-Chain Blocks Data
+repository: https://github.com/complusnetwork/blocks-ava
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: ConverterRegistryContract
+    network: mainnet
+    source:
+      address: "0xdC7e0720b805Cb6DC7b9168f37D2a7b9635c3734"
+      abi: ConverterRegistryContract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/blocks.ts
+      entities:
+        - ConverterAddition
+      abis:
+        - name: ConverterRegistryContract
+          file: ./abis/ConverterRegistryContract.json
+      blockHandlers:
+        - handler: handleBlock
+
