@@ -6,7 +6,7 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: ConverterRegistryContract
-    network: mainnet
+    network: avalanche
     source:
       address: "0xdC7e0720b805Cb6DC7b9168f37D2a7b9635c3734"
       abi: ConverterRegistryContract
