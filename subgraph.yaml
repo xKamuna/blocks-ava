@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: Indexing all Avalanche C-Chain Blocks Data
-repository: https://github.com/complusnetwork/blocks-ava
+repository: https://github.com/xkamuna/blocks-ava
 schema:
   file: ./schema.graphql
 dataSources:
